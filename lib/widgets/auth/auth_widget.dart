@@ -1,3 +1,4 @@
+import 'package:dart_simple/widgets/auth/main_screen/main_screen_widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthWidget extends StatefulWidget {
@@ -62,14 +63,16 @@ class _FormWidget extends StatefulWidget {
 }
 
 class __FormWidgetState extends State<_FormWidget> {
-  final _loginTextController = TextEditingController();
-  final _passwordTextContoller = TextEditingController();
+  final _loginTextController = TextEditingController(text: 'admin');
+  final _passwordTextContoller = TextEditingController(text: '121212');
 
   void _auth() {
     final login = _loginTextController.text;
     final password = _passwordTextContoller.text;
     if (login == 'admin' && password == '121212') {
       print('admin rules');
+
+      Navigator.of(context).pushReplacementNamed('/main_screen');
     } else {
       print('user rules');
     }
