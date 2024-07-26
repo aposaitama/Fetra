@@ -1,3 +1,4 @@
+import 'package:dart_simple/widgets/find_screen/find_screen_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenWidget extends StatefulWidget {
@@ -14,9 +15,7 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
     Text(
       'Home',
     ),
-    Text(
-      'Find',
-    ),
+    FindListWidget(),
     Text(
       'Rides',
     ),
